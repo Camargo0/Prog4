@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Currículo - Desenvolvedor Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header com navegação -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#experiencia">Experiência</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="header-content">
+            <h1 id="nome-saudacao">Olá! Eu sou Kaua Camargo</h1>
+            <p>Desenvolvedor iniciante apaixonado por tecnologia e aprendizado</p>
+            <button id="btn-saudacao" class="btn-primary">Clique para uma saudação!</button>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Seção Sobre -->
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <article>
+                <img src="media/foto.jpg" alt="Foto de Kaua Camargo - Desenvolvedor Web" class="foto-perfil">
+                <p>Sou um desenvolvedor iniciante apaixonado por tecnologia e aprendizado. Estou sempre buscando expandir meus conhecimentos em desenvolvimento web.</p>
+                
+                <h3>Minhas Habilidades Técnicas:</h3>
+                <ul>
+                    <li>HTML5 básico</li>
+                    <li>CSS3 básico</li>
+                    <li>JavaScript básico</li>
+                    <li>Microsoft Office</li>
+                    <li>Internet e redes sociais</li>
+                    <li>Windows</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- Seção Experiência -->
+        <section id="experiencia">
+            <h2>Experiência Profissional</h2>
+            <article>
+                <div class="experiencia-item">
+                    <div class="empresa-info">
+                        <div class="logo-placeholder macca-logo">
+                            <span>🍎</span>
+                        </div>
+                        <div class="cargo-info">
+                            <h3>Operador de Estufa</h3>
+                            <h4>Macçã Desidratados</h4>
+                            <p class="periodo">2023 - 2023</p>
+                            <p class="descricao">Operação e controle de estufas para secagem de produtos, monitoramento de temperatura e umidade.</p>
+                            <p class="localizacao">📍 Fraiburgo - SC</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="experiencia-item">
+                    <div class="empresa-info">
+                        <div class="logo-placeholder trombini-logo">
+                            <span>📦</span>
+                        </div>
+                        <div class="cargo-info">
+                            <h3>Assistente de Produção</h3>
+                            <h4>Trombini Embalagens</h4>
+                            <p class="periodo">2023 - Presente</p>
+                            <p class="descricao">Extração de dados de produção, assistência na gestão de processos produtivos e controle de qualidade.</p>
+                            <p class="localizacao">📍 Fraiburgo - SC</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Seção Habilidades com Canvas -->
+        <section id="habilidades">
+            <h2>Habilidades e Projetos</h2>
+            <article>
+                <h3>Nível de Proficiência</h3>
+                <canvas id="skills-canvas" width="400" height="200"></canvas>
+                
+                <div class="form-section">
+                    <h3>Deixe sua mensagem</h3>
+                    <form id="contato-form">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+                        
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
+                        
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem"></textarea>
+                        
+                        <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </article>
+        </section>
+
+
+
+        <!-- Seção de Contador de Visitas -->
+        <section id="estatisticas">
+            <h2>Estatísticas</h2>
+            <article>
+                <p>Esta página foi visitada <span id="contador-visitas">0</span> vezes!</p>
+                <button id="btn-mudar-cor" class="btn-secondary">Mudar Cor de Fundo</button>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer com links sociais -->
+    <footer>
+        <h3>Conecte-se Comigo</h3>
+        <ul class="social-links">
+            <li><a href="https://linkedin.com/in/joaosilva" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/joaosilva" target="_blank">GitHub</a></li>
+            <li><a href="mailto:joao.silva@email.com">E-mail</a></li>
+            <li><a href="https://twitter.com/joaosilva" target="_blank">Twitter</a></li>
+        </ul>
+        <p>&copy; 2024 Kaua Camargo. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
