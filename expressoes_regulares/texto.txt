@@ -1,0 +1,55 @@
+import re
+
+arquivo = "texto.txt"
+
+padroes = {
+    "CEP": r"\b\d{5}-\d{3}\b",
+    "EMAIL": r"\b[\w.-]+@[\w.-]+\.[a-zA-Z]{2,}\b",
+    "CPF": r"\b\d{3}\.\d{3}\.\d{3}-\d{2}\b",
+    "CNPJ": r"\b\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}\b",
+    "TELEFONE": r"\(\d{2}\)\s?\d{4,5}-\d{4}",
+    "PLACA ANTIGA": r"\b[A-Z]{3}-\d{4}\b",
+    "PLACA MERCOSUL": r"\b[A-Z]{3}\d[A-Z]\d{2}\b",
+    "DATA": r"\b\d{2}/\d{2}/\d{4}\b",
+    "HORA": r"\b\d{2}:\d{2}\b",
+    "IP": r"\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b"
+}
+
+try:
+    with open(arquivo, "r", encoding="utf-8") as f:
+
+        linhas = f.readlines()
+
+except FileNotFoundError:
+    print("ERRO: texto.txt nao encontrado!")
+    exit()
+
+
+print("\n====================================")
+print("       ANALISE DO ARQUIVO")
+print("====================================")
+
+
+encontrou = False
+
+for numero_linha, linha in enumerate(linhas, start=1):
+
+    for nome, regex in padroes.items():
+
+        resultados = re.findall(regex, linha)
+
+        for resultado in resultados:
+
+            encontrou = True
+
+            print("\nEncontrado:", nome)
+            print("Valor:", resultado)
+            print("Linha:", numero_linha)
+
+
+if encontrou == False:
+    print("\nNenhum padrao foi encontrado.")
+
+print("\n====================================")
+print("           FIM DA ANALISE")
+print("====================================")
